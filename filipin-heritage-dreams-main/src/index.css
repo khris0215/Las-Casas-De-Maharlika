@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 30% 96%;
+    --foreground: 220 30% 12%;
+
+    --card: 35 25% 94%;
+    --card-foreground: 220 30% 12%;
+
+    --popover: 35 25% 94%;
+    --popover-foreground: 220 30% 12%;
+
+    --primary: 220 60% 20%;
+    --primary-foreground: 43 80% 65%;
+
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 220 30% 12%;
+
+    --muted: 35 20% 88%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 43 80% 55%;
+    --accent-foreground: 220 60% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 43 40% 75%;
+    --input: 35 20% 85%;
+    --ring: 43 80% 55%;
+
+    --radius: 0.25rem;
+
+    /* Custom luxury tokens */
+    --gold: 43 80% 55%;
+    --gold-light: 43 70% 70%;
+    --gold-dark: 43 90% 40%;
+    --navy: 220 60% 15%;
+    --navy-light: 220 50% 25%;
+    --royal-blue: 220 70% 30%;
+    --deep-brown: 25 40% 18%;
+    --warm-beige: 35 30% 92%;
+    --terracotta: 15 45% 45%;
+
+    --sidebar-background: 220 60% 15%;
+    --sidebar-foreground: 43 80% 65%;
+    --sidebar-primary: 43 80% 55%;
+    --sidebar-primary-foreground: 220 60% 12%;
+    --sidebar-accent: 220 50% 25%;
+    --sidebar-accent-foreground: 43 80% 65%;
+    --sidebar-border: 43 40% 30%;
+    --sidebar-ring: 43 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(43 80% 55%), hsl(43 70% 70%), hsl(43 80% 55%));
+  }
+
+  .gold-text-gradient {
+    background: linear-gradient(135deg, hsl(43 80% 55%), hsl(43 70% 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-border {
+    border-color: hsl(43 80% 55%);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 20px hsl(43 80% 55% / 0.3), 0 0 40px hsl(43 80% 55% / 0.1);
+  }
+
+  .navy-gradient {
+    background: linear-gradient(180deg, hsl(220 60% 15%), hsl(220 60% 10%));
+  }
+
+  .luxury-shadow {
+    box-shadow: 0 20px 60px hsl(220 60% 15% / 0.15), 0 8px 20px hsl(43 80% 55% / 0.08);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, hsl(220 60% 8% / 0.6) 0%, hsl(220 60% 8% / 0.4) 50%, hsl(220 60% 8% / 0.7) 100%);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
