@@ -16,7 +16,7 @@ const roomData: Record<string, {
 }> = {
   deluxe: {
     name: "Abaniko (Standard Room)",
-    price: 189,
+    price: 11000,
     image: roomDeluxe,
     occupancy: "2 adults | 1 child below 7",
     description:
@@ -24,7 +24,7 @@ const roomData: Record<string, {
   },
   seaview: {
     name: "Perlas (Deluxe Room)",
-    price: 209,
+    price: 20000,
     image: roomSeaview,
     occupancy: "2 adults | 1 child below 7",
     description:
@@ -32,7 +32,7 @@ const roomData: Record<string, {
   },
   suite: {
     name: "Maharlika Suite",
-    price: 399,
+    price: 30000,
     image: roomSuite,
     occupancy: "4 adults | 2 children below 7",
     description:
