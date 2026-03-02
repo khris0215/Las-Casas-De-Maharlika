@@ -1,68 +1,83 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const casinoGames = [
-  {
-    name: "Maharlika Blackjack",
-    description:
-      "Classic six-deck blackjack paced for conversation, with hand signals reviewed by the dealer before play begins.",
-  },
-  {
-    name: "Prestige Baccarat",
-    description:
-      "Midi-baccarat tables with hand-cut cards and narrated play so every banker and player draw remains clear.",
-  },
-  {
-    name: "Roulette Royale",
-    description:
-      "Single-zero wheel with velvet markers, perfect for guests who prefer deliberate spins and measured wagers.",
-  },
-  {
-    name: "Dragon Fortune Link",
-    description:
-      "Progressive slot bank featuring synchronized lighting cues that celebrate jackpot tiers across all seats.",
-  },
-  {
-    name: "Hybrid Baccarat Arena",
-    description:
-      "Electronic terminals mirror a live shoe, letting friends track the same results while managing their own bets.",
-  },
-  {
-    name: "Maharlika Salon Poker",
-    description:
-      "Invitation-only cash games with capped seats, handwritten ledgers, and dedicated beverage hosts.",
-  },
-];
-
 const Casino = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header variant="static" />
       <main className="container mx-auto px-6 pt-16 pb-20 space-y-12">
-        <section>
+        <section className="space-y-4">
           <p className="font-sans text-xs tracking-[0.4em] uppercase text-muted-foreground">
             Casino
           </p>
-          <h1 className="mt-4 font-serif text-4xl text-primary">
-            Games & Descriptions
+          <h1 className="font-serif text-4xl text-primary">
+            Text-Only Casino Guide
           </h1>
-          <p className="mt-4 max-w-3xl text-sm text-muted-foreground">
-            Every featured game is listed below on a single page. Each bullet
-            begins with the game title followed by a concise description so you
-            can plan your evening before visiting the floor.
+          <p className="max-w-3xl text-sm text-muted-foreground">
+            All featured games appear on this single page with bullet points
+            that call out the genre, mode, and a short description. No
+            animation, no live data—just clear text for easy reference.
           </p>
         </section>
 
         <section>
-          <ul className="list-disc space-y-4 pl-6 text-sm leading-relaxed text-muted-foreground">
-            {casinoGames.map((game) => (
-              <li key={game.name}>
-                <span className="font-serif text-lg text-primary">
-                  {game.name}.
-                </span>{" "}
-                <span>{game.description}</span>
-              </li>
-            ))}
+          <ul className="list-disc space-y-6 pl-6 text-sm text-muted-foreground">
+            <li>
+              <p className="font-serif text-lg text-primary">
+                Tumbang Preso Strike
+              </p>
+              <p className="text-xs uppercase tracking-[0.3em] text-foreground">
+                Genre: Arcade | Mode: PvE
+              </p>
+              <p>
+                A skill-based throwing game where players aim at moving targets
+                to score points and win prizes. Accuracy and timing determine
+                the payout.
+              </p>
+            </li>
+            <li>
+              <p className="font-serif text-lg text-primary">Patintero Dash</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-foreground">
+                Genre: Strategy + Action | Mode: PvP
+              </p>
+              <p>
+                Players guide a runner across guarded lanes using timing and
+                quick decisions. The farther they cross, the higher the reward
+                multiplier.
+              </p>
+            </li>
+            <li>
+              <p className="font-serif text-lg text-primary">Sungka Battle</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-foreground">
+                Genre: Table Game | Mode: PvP
+              </p>
+              <p>
+                A competitive version of the traditional board game where
+                players capture more shells than their opponent through strategy
+                and planning.
+              </p>
+            </li>
+            <li>
+              <p className="font-serif text-lg text-primary">Holen</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-foreground">
+                Genre: Table Game | Mode: PvP
+              </p>
+              <p>
+                A marble-flicking game similar to shuffleboard or pool, where
+                players score by knocking marbles into target holes.
+              </p>
+            </li>
+            <li>
+              <p className="font-serif text-lg text-primary">Luksong Tinik</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-foreground">
+                Genre: Arcade | Mode: PvE
+              </p>
+              <p>
+                An arcade reflex game where players jump over rising laser bars
+                or digital obstacles. Timing, reaction speed, and risk
+                management determine success.
+              </p>
+            </li>
           </ul>
         </section>
       </main>
