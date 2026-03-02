@@ -7,36 +7,39 @@ import roomDeluxe from "@/assets/room-deluxe.jpg";
 import roomSeaview from "@/assets/room-seaview.jpg";
 import roomSuite from "@/assets/room-suite.jpg";
 
-const roomData: Record<string, {
-  name: string;
-  price: number;
-  image: string;
-  description: string;
-  occupancy: string;
-}> = {
+const roomData: Record<
+  string,
+  {
+    name: string;
+    price: number;
+    image: string;
+    description: string;
+    occupancy: string;
+  }
+> = {
   deluxe: {
     name: "Tahanan Familia Suite",
     price: 11000,
     image: roomDeluxe,
-    occupancy: "",
+    occupancy: "85-100 sqm • Up to 4 guests • Flexible bed arrangements",
     description:
-      "Experience refined comfort in our Standard room, featuring elegant Filipino-inspired décor, premium bedding, and modern amenities. Each room offers a serene retreat with warm ambient lighting and thoughtful touches that reflect the rich cultural heritage of the Philippines.",
+      "The Tahanan Familia Suite is an 85-100 sqm haven designed for families and close-knit groups. Choose between two queen-size beds or one king-size bed paired with two single beds, with space for additional rollaways when needed. A separate living room, private dining area, mini bar, work desk, and expansive luxury bathroom echo the warmth of a Filipino home while delivering modern conveniences, high-speed WiFi, and reliable air conditioning. Standout amenities include the dedicated living room, private dining space, bathtub and rain shower combination, dual Smart TVs for both bedroom and lounge, and wide windows framing either city or resort views.",
   },
   seaview: {
     name: "Perlas Premium Suite",
     price: 20000,
     image: roomSeaview,
-    occupancy: "",
+    occupancy: "55-65 sqm • King bed • Up to 2 guests (third on request)",
     description:
-      "A luxurious hotel bedroom featuring elegant Filipino-inspired décor, warm ambient lighting, and a stunning sunset city view through floor-to-ceiling windows. The space blends comfort, sophistication, and cultural charm for a relaxing premium stay.",
+      "The Perlas Premium Suite is a 55-65 sqm sanctuary tailored for couples or solo travelers craving privacy and polish. A plush king-size bed anchors the space, comfortably hosting two guests while allowing a third upon request. Enjoy a private living area, ergonomic work desk, well-stocked mini bar, and a generous bathroom fitted with premium fixtures. Filipino-inspired accents, contemporary furnishings, dependable high-speed WiFi, climate control, and floor-to-ceiling windows with sweeping city views set a calming tone for both leisure escapes and business stays. Amenities include the separate lounge, rain shower and bathtub, full-height glazing, a 55-inch Smart TV, the mini bar with coffee and tea station, and a roomy wardrobe complete with safety deposit box.",
   },
   suite: {
     name: "Maharlika Executive Suite",
     price: 30000,
     image: roomSuite,
-    occupancy: "",
+    occupancy: "130-160 sqm • King bed • Up to 2 guests (expandable)",
     description:
-      "Our most spacious accommodation, The Maharlika Executive Suite offers a grand living experience with separate living and sleeping areas. Adorned with opulent Filipino craftsmanship, this suite is perfect for families seeking the ultimate in luxury and comfort.",
+      "The Maharlika Executive Suite spans 130-160 sqm and caters to executives or VIP travelers who expect absolute discretion and comfort. A refined master bedroom links to a separate luxury living room, private dining area, executive-caliber workspace, and an oversized bathroom lined with premium finishes. Floor-to-ceiling panoramic windows, integrated smart technology, fast WiFi, and well-balanced air conditioning ensure effortless transitions from work to relaxation. Signature amenities include the stand-alone living salon, private dining enclave, bathroom with bathtub, rain shower, and double sinks, a walk-in closet, sweeping panoramic glazing, and the option for dedicated private butler service.",
   },
 };
 
@@ -57,8 +60,13 @@ const RoomDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
-          <h1 className="font-serif text-3xl text-primary mb-4">Room Not Found</h1>
-          <Link to="/" className="text-gold hover:text-gold-dark transition-colors">
+          <h1 className="font-serif text-3xl text-primary mb-4">
+            Room Not Found
+          </h1>
+          <Link
+            to="/"
+            className="text-gold hover:text-gold-dark transition-colors"
+          >
             ← Back to Home
           </Link>
         </div>
@@ -117,11 +125,16 @@ const RoomDetails = () => {
             </p>
 
             <div className="mb-12">
-              <h3 className="font-serif text-2xl text-primary mb-6">Amenities</h3>
+              <h3 className="font-serif text-2xl text-primary mb-6">
+                Amenities
+              </h3>
               <div className="w-12 h-[2px] gold-gradient mb-8" />
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {amenities.map(({ icon: Icon, name }) => (
-                  <div key={name} className="flex items-center gap-3 text-foreground">
+                  <div
+                    key={name}
+                    className="flex items-center gap-3 text-foreground"
+                  >
                     <Icon size={20} className="text-gold" />
                     <span className="font-sans text-sm">{name}</span>
                   </div>
@@ -131,8 +144,13 @@ const RoomDetails = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-between border-t border-gold/30 pt-8">
               <p className="font-serif text-2xl text-primary mb-4 sm:mb-0">
-                From <span className="gold-text-gradient font-bold">₱{room.price}</span>{" "}
-                <span className="text-base text-muted-foreground">per night</span>
+                From{" "}
+                <span className="gold-text-gradient font-bold">
+                  ₱{room.price}
+                </span>{" "}
+                <span className="text-base text-muted-foreground">
+                  per night
+                </span>
               </p>
               <button className="gold-gradient px-10 py-3 text-accent-foreground font-sans text-sm tracking-[0.3em] uppercase font-bold rounded-sm hover:gold-glow transition-all duration-500 hover:scale-105">
                 Book Now
