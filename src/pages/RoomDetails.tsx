@@ -19,7 +19,7 @@ const roomData: Record<
 > = {
   deluxe: {
     name: "Tahanan Familia Suite",
-    price: 11000,
+    price: 10800,
     image: roomDeluxe,
     occupancy: "85-100 sqm • Up to 4 guests • Flexible bed arrangements",
     description:
@@ -27,7 +27,7 @@ const roomData: Record<
   },
   seaview: {
     name: "Perlas Premium Suite",
-    price: 20000,
+    price: 16800,
     image: roomSeaview,
     occupancy: "55-65 sqm • King bed • Up to 2 guests (third on request)",
     description:
@@ -35,7 +35,7 @@ const roomData: Record<
   },
   suite: {
     name: "Maharlika Executive Suite",
-    price: 30000,
+    price: 21800,
     image: roomSuite,
     occupancy: "130-160 sqm • King bed • Up to 2 guests (expandable)",
     description:
