@@ -8,21 +8,21 @@ import roomSuite from "@/assets/room-suite.jpg";
 const rooms = [
   {
     id: "deluxe",
-    name: "Abaniko (Standard Room)",
+    name: "Tahanan Familia Suite",
     price: 11000,
     occupancy: "",
     image: roomDeluxe,
   },
   {
     id: "seaview",
-    name: "Perlas (Deluxe Room)",
+    name: "Perlas Premium Suite",
     price: 20000,
     occupancy: "",
     image: roomSeaview,
   },
   {
     id: "suite",
-    name: "Maharlika Suite",
+    name: "Maharlika Executive Suite",
     price: 30000,
     occupancy: "",
     image: roomSuite,
