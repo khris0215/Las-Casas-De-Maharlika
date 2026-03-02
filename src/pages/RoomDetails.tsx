@@ -20,7 +20,7 @@ const roomData: Record<string, {
     image: roomDeluxe,
     occupancy: "2 adults | 1 child below 7",
     description:
-      "Experience refined comfort in our De Luxe Room, featuring elegant Filipino-inspired décor, premium bedding, and modern amenities. Each room offers a serene retreat with warm ambient lighting and thoughtful touches that reflect the rich cultural heritage of the Philippines.",
+      "Experience refined comfort in our Standard room, featuring elegant Filipino-inspired décor, premium bedding, and modern amenities. Each room offers a serene retreat with warm ambient lighting and thoughtful touches that reflect the rich cultural heritage of the Philippines.",
   },
   seaview: {
     name: "Perlas (Deluxe Room)",
@@ -36,7 +36,7 @@ const roomData: Record<string, {
     image: roomSuite,
     occupancy: "4 adults | 2 children below 7",
     description:
-      "Our most spacious accommodation, The M Suite offers a grand living experience with separate living and sleeping areas. Adorned with opulent Filipino craftsmanship, this suite is perfect for families seeking the ultimate in luxury and comfort.",
+      "Our most spacious accommodation, The Maharlika Suite offers a grand living experience with separate living and sleeping areas. Adorned with opulent Filipino craftsmanship, this suite is perfect for families seeking the ultimate in luxury and comfort.",
   },
 };
 
