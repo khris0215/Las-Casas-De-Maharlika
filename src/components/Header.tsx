@@ -1,26 +1,33 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+
+type HeaderProps = {
+  variant?: "fixed" | "static";
+};
 
 const navLinks = [
   { name: "Home", href: "/#home" },
   { name: "About", href: "/#about" },
   { name: "Accommodations", href: "/#accommodations" },
-  { name: "Casino", href: "/#home" },
-  { name: "Dining", href: "/#home" },
+  { name: "Casino", href: "/casino" },
+  { name: "Dining", href: "/dining" },
   { name: "Contact", href: "/#contact" },
 ];
 
-const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+const Header = ({ variant = "fixed" }: HeaderProps) => {
+  const isFixed = variant === "fixed";
+  const [scrolled, setScrolled] = useState(!isFixed);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (!isFixed) return;
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isFixed]);
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
@@ -31,16 +38,27 @@ const Header = () => {
         return;
       }
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      return;
     }
+
+    if (location.pathname !== href) {
+      navigate(href);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const positionClasses = isFixed
+    ? "fixed top-0 left-0 right-0"
+    : "relative w-full";
+  const appearanceClasses = isFixed
+    ? scrolled
+      ? "bg-navy border-gold/30 shadow-lg"
+      : "bg-transparent border-transparent"
+    : "bg-navy border-gold/30 shadow-lg";
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
-        scrolled
-          ? "bg-navy border-gold/30 shadow-lg"
-          : "bg-transparent border-transparent"
-      }`}
+      className={`${positionClasses} z-50 transition-all duration-500 border-b ${appearanceClasses}`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2">

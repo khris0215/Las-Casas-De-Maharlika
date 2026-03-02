@@ -15,28 +15,28 @@ const roomData: Record<string, {
   occupancy: string;
 }> = {
   deluxe: {
-    name: "Abaniko (Standard Room)",
+    name: "Tahanan Familia Suite",
     price: 11000,
     image: roomDeluxe,
-    occupancy: "2 adults | 1 child below 7",
+    occupancy: "",
     description:
       "Experience refined comfort in our Standard room, featuring elegant Filipino-inspired décor, premium bedding, and modern amenities. Each room offers a serene retreat with warm ambient lighting and thoughtful touches that reflect the rich cultural heritage of the Philippines.",
   },
   seaview: {
-    name: "Perlas (Deluxe Room)",
+    name: "Perlas Premium Suite",
     price: 20000,
     image: roomSeaview,
-    occupancy: "2 adults | 1 child below 7",
+    occupancy: "",
     description:
       "A luxurious hotel bedroom featuring elegant Filipino-inspired décor, warm ambient lighting, and a stunning sunset city view through floor-to-ceiling windows. The space blends comfort, sophistication, and cultural charm for a relaxing premium stay.",
   },
   suite: {
-    name: "Maharlika Suite",
+    name: "Maharlika Executive Suite",
     price: 30000,
     image: roomSuite,
-    occupancy: "4 adults | 2 children below 7",
+    occupancy: "",
     description:
-      "Our most spacious accommodation, The Maharlika Suite offers a grand living experience with separate living and sleeping areas. Adorned with opulent Filipino craftsmanship, this suite is perfect for families seeking the ultimate in luxury and comfort.",
+      "Our most spacious accommodation, The Maharlika Executive Suite offers a grand living experience with separate living and sleeping areas. Adorned with opulent Filipino craftsmanship, this suite is perfect for families seeking the ultimate in luxury and comfort.",
   },
 };
 
